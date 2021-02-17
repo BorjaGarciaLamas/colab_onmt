@@ -1,0 +1,58 @@
+
+## Where the samples will be written
+save_data: news_ga/run/examples
+## Where the vocab(s) will be written
+src_vocab: news_ga/run/src_vocab.txt
+tgt_vocab: news_ga/run/target_vocab.txt
+# Prevent overwriting existing files in the folder
+overwrite: True
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: news_ga/run/resources_train_tittle.txt
+        path_tgt: news_ga/run/resources_train_content.txt
+    valid:
+        path_src: news_ga/run/resources_val_tittle.txt
+        path_tgt: news_ga/run/resources_val_content.txt
+
+#Model configuration
+
+save_model: news_ga/models/model.es-es
+save_checkpoint_steps: 10000
+keep_checkpoint: 10
+seed: 3435
+train_steps: 500000
+valid_steps: 10000
+warmup_steps: 8000
+report_every: 1
+
+decoder_type: transformer
+encoder_type: transformer
+word_vec_size: 512
+rnn_size: 512
+layers: 6
+transformer_ff: 2048
+heads: 8
+
+accum_count: 8
+optim: adam
+adam_beta1: 0.9
+adam_beta2: 0.998
+decay_method: noam
+learning_rate: 2.0
+max_grad_norm: 0.0
+
+batch_size: 4096
+batch_type: tokens
+normalization: tokens
+dropout: 0.1
+label_smoothing: 0.1
+
+max_generator_batches: 2
+
+param_init: 0.0
+param_init_glorot: 'true'
+position_encoding: 'true'
+
+world_size: 1

@@ -1,0 +1,66 @@
+
+#First test using openNMT yaml
+
+## Where the samples will be written
+save_data: news_ga/run/examples
+## Where the vocab(s) will be written
+src_vocab: news_ga/run/src_vocab.txt
+tgt_vocab: news_ga/run/target_vocab.txt
+# Prevent overwriting existing files in the folder
+overwrite: True
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: news_ga/run/resources_train_tittle.txt
+        path_tgt: news_ga/run/resources_train_content.txt
+    valid:
+        path_src: news_ga/run/resources_val_tittle.txt
+        path_tgt: news_ga/run/resources_val_content.txt
+
+#Model configuration
+
+# General opts
+save_model: news_ga/model_1000
+save_checkpoint_steps: 1
+train_steps: 100
+valid_steps: 50
+
+# Batching
+queue_size: 10000
+bucket_size: 32768
+world_size: 4
+# gpu_ranks: [0, 1, 2, 3]
+batch_type: "tokens"
+batch_size: 4096
+valid_batch_size: 8
+max_generator_batches: 2
+accum_count: [4]
+accum_steps: [0]
+
+# Optimization
+model_dtype: "fp32"
+optim: "adam"
+learning_rate: 2
+warmup_steps: 8000
+decay_method: "noam"
+adam_beta2: 0.998
+max_grad_norm: 0
+label_smoothing: 0.1
+param_init: 0
+param_init_glorot: true
+normalization: "tokens"
+
+# Model
+encoder_type: transformer
+decoder_type: transformer
+position_encoding: true
+enc_layers: 6
+dec_layers: 6
+heads: 8
+rnn_size: 512
+word_vec_size: 512
+transformer_ff: 2048
+dropout_steps: [0]
+dropout: [0.1]
+attention_dropout: [0.1]
