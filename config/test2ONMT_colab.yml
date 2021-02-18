@@ -56,3 +56,4 @@ param_init_glorot: 'true'
 position_encoding: 'true'
 
 world_size: 1
+gpu_rank: [0]
