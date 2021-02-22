@@ -48,7 +48,10 @@ pooler_num_fc_layers: 3
 pooler_size_per_head: 128
 pooler_type: "first_token_transform"
 type_vocab_size: 2
-batch_size: 2048
+batch_type: "tokens"
+batch_size: 4096
+valid_batch_size: 8
+max_generator_batches: 2
 
 world_size: 1
 gpu_rank: [0]
