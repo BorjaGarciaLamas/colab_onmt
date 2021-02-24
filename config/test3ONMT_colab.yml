@@ -16,7 +16,7 @@ data:
         path_tgt: ONMT_colab/news_ga/run/resources_val_content.txt
 
 #Model configuration
-save_model: ONMT_colab/news_ga/models/model_bert_mul.es-es
+save_model: ONMT_colab/model_bert_mul.es-es
 save_checkpoint_steps: 10000
 keep_checkpoint: 10
 seed: 3435
