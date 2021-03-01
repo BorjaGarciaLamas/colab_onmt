@@ -24,6 +24,8 @@ train_steps: 2000
 valid_steps: 1000
 warmup_steps: 8000
 report_every: 1
+start_epoch: 0
+-start_iteration: 0
 
 
 architectures: [
