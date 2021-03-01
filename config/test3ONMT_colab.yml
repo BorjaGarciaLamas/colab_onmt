@@ -1,19 +1,19 @@
 ## Where the samples will be written
-save_data: ONMT_colab/news_ga/run/examples
+save_data: ONMT_colab/news_ga/run/
 ## Where the vocab(s) will be written
-src_vocab: ONMT_colab/news_ga/run/src_vocab.txt
-tgt_vocab: ONMT_colab/news_ga/run/target_vocab.txt
+src_vocab: ONMT_colab/news_ga/run/src_vocab.src
+tgt_vocab: ONMT_colab/news_ga/run/target_vocab.tgt
 # Prevent overwriting existing files in the folder
 overwrite: True
 
 # Corpus opts:
 data:
     corpus_1:
-        path_src: ONMT_colab/news_ga/run/resources_train_tittle.txt
-        path_tgt: ONMT_colab/news_ga/run/resources_train_content.txt
+        path_src: ONMT_colab/news_ga/run/resources_train_tittle.src
+        path_tgt: ONMT_colab/news_ga/run/resources_train_content.tgt
     valid:
-        path_src: ONMT_colab/news_ga/run/resources_val_tittle.txt
-        path_tgt: ONMT_colab/news_ga/run/resources_val_content.txt
+        path_src: ONMT_colab/news_ga/run/resources_val_tittle.src
+        path_tgt: ONMT_colab/news_ga/run/resources_val_content.tgt
 
 #Model configuration
 save_model: ONMT_colab/model_bert_mul.es-es
@@ -24,13 +24,13 @@ train_steps: 2000
 valid_steps: 1000
 warmup_steps: 8000
 report_every: 1
-start_epoch: 0
--start_iteration: 0
 
 
 architectures: [
     "BertForMaskedLM"
   ]
+
+  
 attention_probs_dropout_prob: 0.1
 directionality: "bidi"
 hidden_act: "gelu"
