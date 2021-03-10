@@ -1,0 +1,62 @@
+## Where the samples will be written
+save_data: ONMT_colab/news_ga/run/
+## Where the vocab(s) will be written
+src_vocab: ONMT_colab/news_ga/run/src_vocab.txt
+tgt_vocab: ONMT_colab/news_ga/run/target_vocab.txt
+# Prevent overwriting existing files in the folder
+overwrite: True
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: ONMT_colab/news_ga/run/resources_train_tittle.txt
+        path_tgt: ONMT_colab/news_ga/run/resources_train_content.txt
+    valid:
+        path_src: ONMT_colab/news_ga/run/resources_val_tittle.txt
+        path_tgt: ONMT_colab/news_ga/run/resources_val_content.txt
+
+#Model configuration
+save_model: ONMT_colab/model_bert_mul.es-es
+save_checkpoint_steps: 100
+keep_checkpoint: 10
+seed: 3435
+train_steps: 2000
+valid_steps: 500
+warmup_steps: 8000
+report_every: 1
+
+
+architectures: [
+    "BertForMaskedLM"
+  ]
+
+  
+attention_probs_dropout_prob: 0.1
+directionality: "bidi"
+hidden_act: "gelu"
+hidden_dropout_prob: 0.1
+hidden_size: 768
+initializer_range: 0.02
+intermediate_size: 3072
+layer_norm_eps: 1e-12
+max_position_embeddings: 512
+model_type: "text"
+num_attention_heads: 6
+num_hidden_layers: 6
+pad_token_id: 0
+pooler_fc_size: 768
+pooler_num_attention_heads: 6
+pooler_num_fc_layers: 3
+pooler_size_per_head: 128
+pooler_type: "first_token_transform"
+type_vocab_size: 2
+batch_type: "tokens"
+batch_size: 4096
+valid_batch_size: 8
+max_generator_batches: 4
+learning_rate: 1
+learning_rate_decay: 0.05
+
+
+world_size: 1
+gpu_rank: [0]
