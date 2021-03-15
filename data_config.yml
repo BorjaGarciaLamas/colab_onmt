@@ -1,0 +1,7 @@
+model_dir: ONMT_colab 
+
+data:
+  train_features_file: ONMT_colab/news_ga/run/resources_train_tittle.txt
+  train_labels_file: ONMT_colab/news_ga/run/resources_train_content.txt
+  eval_features_file: ONMT_colab/news_ga/run/resources_val_tittle.txt
+  eval_labels_file: ONMT_colab/news_ga/run/resources_val_content.txt
