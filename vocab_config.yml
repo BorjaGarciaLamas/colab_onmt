@@ -1,0 +1,7 @@
+## Where the samples will be written
+save_data: ONMT_colab/
+## Where the vocab(s) will be written
+src_vocab: ONMT_colab/news_ga/run/src_vocab.txt
+tgt_vocab: ONMT_colab/news_ga/run/target_vocab.txt
+# Prevent overwriting existing files in the folder
+overwrite: True
