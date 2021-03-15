@@ -1,7 +1,16 @@
-model_dir: ONMT_colab 
+## Where the samples will be written
+save_data: ONMT_colab/
+## Where the vocab(s) will be written
+src_vocab: ONMT_colab/news_ga/run/src_vocab.txt
+tgt_vocab: ONMT_colab/news_ga/run/target_vocab.txt
+# Prevent overwriting existing files in the folder
+overwrite: True
 
+# Corpus opts:
 data:
-  train_features_file: ONMT_colab/news_ga/run/resources_train_tittle.txt
-  train_labels_file: ONMT_colab/news_ga/run/resources_train_content.txt
-  eval_features_file: ONMT_colab/news_ga/run/resources_val_tittle.txt
-  eval_labels_file: ONMT_colab/news_ga/run/resources_val_content.txt
+    corpus_1:
+        path_src: ONMT_colab/news_ga/run/resources_train_tittle.txt
+        path_tgt: ONMT_colab/news_ga/run/resources_train_content.txt
+    valid:
+        path_src: ONMT_colab/news_ga/run/resources_val_tittle.txt
+        path_tgt: ONMT_colab/news_ga/run/resources_val_content.txt
