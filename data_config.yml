@@ -1,0 +1,7 @@
+data:
+    corpus_1:
+        path_src: ONMT_colab/news_ga/run/resources_train_tittle.txt
+        path_tgt: ONMT_colab/news_ga/run/resources_train_content.txt
+    valid:
+        path_src: ONMT_colab/news_ga/run/resources_val_tittle.txt
+        path_tgt: ONMT_colab/news_ga/run/resources_val_content.txt
