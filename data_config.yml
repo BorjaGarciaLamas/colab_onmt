@@ -1,5 +1,5 @@
 ## Where the samples will be written
-save_data: ONMT_colab/news_ga/run/
+save_data: ONMT_colab/demo1_data
 ## Where the vocab(s) will be written
 src_vocab: ONMT_colab/news_ga/run/src_vocab.txt
 tgt_vocab: ONMT_colab/news_ga/run/target_vocab.txt
@@ -15,11 +15,4 @@ data:
         path_src: ONMT_colab/news_ga/run/resources_val_tittle.txt
         path_tgt: ONMT_colab/news_ga/run/resources_val_content.txt
 
-#Model configuration
-save_checkpoint_steps: 100
-keep_checkpoint: 10
-seed: 3435
-train_steps: 2000
-valid_steps: 500
-warmup_steps: 8000
-report_every: 1
+
