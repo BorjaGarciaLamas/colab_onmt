@@ -10,7 +10,7 @@ overwrite: True
 data:
     corpus_1:
         path_src: ONMT_colab/news_ga/run/train_tittle_v2.txt
-        path_tgt: ONMT_colab/news_ga/run/train_content.txt
+        path_tgt: ONMT_colab/news_ga/run/train_content_v2.txt
     valid:
         path_src: ONMT_colab/news_ga/run/resources_val_tittle.txt
         path_tgt: ONMT_colab/news_ga/run/resources_val_content.txt
