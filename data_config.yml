@@ -1,8 +1,3 @@
-## Where the samples will be written
-save_data: ONMT_colab/demo1_data
-# Prevent overwriting existing files in the folder
-overwrite: True
-
 # Corpus opts:
 data:
     corpus_1:
