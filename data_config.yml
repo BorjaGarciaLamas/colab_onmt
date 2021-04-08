@@ -1,10 +1,10 @@
 # Corpus opts:
 data:
     corpus_1:
-        path_src: ONMT_colab/news_ga/run/train_tittle_v21.txt
-        path_tgt: ONMT_colab/news_ga/run/train_content_v21.txt
+        path_src: /content/ONMT_colab/news_ga/run/train_tittle_v21.txt
+        path_tgt: /content/ONMT_colab/news_ga/run/train_content_v21.txt
     valid:
-        path_src: ONMT_colab/news_ga/run/resources_val_tittle.txt
-        path_tgt: ONMT_colab/news_ga/run/resources_val_content.txt
+        path_src: /content/ONMT_colab/news_ga/run/resources_val_tittle.txt
+        path_tgt: /content/ONMT_colab/news_ga/run/resources_val_content.txt
 
 
